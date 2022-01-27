@@ -53,13 +53,15 @@ fn setup(
         })
         .insert_bundle(bevy_mod_picking::PickableBundle::default())
         .insert(bevy_transform_gizmo::GizmoTransformable);
-    // light
 	
+	
+	//Can't insert
 	commands.spawn_scene(asset_server.load("C:/Rust/bevy/assets/models/drone/drone.gltf#Scene0"))
-	.insert_bundle(bevy_mod_picking::PickableBundle::default())
-    .insert(bevy_transform_gizmo::GizmoTransformable);; 
+        .insert_bundle(bevy_mod_picking::PickableBundle::default())
+        .insert(bevy_transform_gizmo::GizmoTransformable);
 	// "models/drone/drone.gltf#Scene0"));
-	
+    	
+    // light
     commands.spawn_bundle(PointLightBundle {
         transform: Transform::from_xyz(4.0, 8.0, 4.0),
         ..Default::default()
